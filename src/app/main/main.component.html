@@ -1,0 +1,84 @@
+<div class="row">
+
+	<!-- planet 1 input -->
+	<div class="col-sm-3">
+		<select class="form-control" [(ngModel)]="planet1" (change)="planetChange('planet1')">
+			<option value="">Select</option>
+			<option *ngFor="let planet of planets" [ngValue]="planet"> {{planet.name}} </option>
+		</select>
+
+		<div *ngIf="planet1 != ''">
+			<div class="radio {{vehicle.max_distance < planet1.distance ? 'disabled' : ''}}"
+				*ngFor="let vehicle of vehicles_arr">
+				<label>
+					<input type="radio" name="vehicle1" [value]="vehicle" [(ngModel)]="vehicle1"
+					disabled="{{vehicle.max_distance < planet1.distance ? 'disabled' : 'false'}}"
+					(ngModelChange)="onVehicleSelect('vehicle1')">
+					{{vehicle.name}} ({{vehicle.total_no}})
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<!-- planet 2 input -->
+	<div class="col-sm-3">
+		<select class="form-control" [(ngModel)]="planet2" (change)="planetChange('planet2')">
+			<option value="">Select</option>
+			<option *ngFor="let planet of planets" [ngValue]="planet"> {{planet.name}} </option>
+		</select>
+		
+		<div *ngIf="planet2 != ''">
+			<div class="radio {{vehicle.max_distance < planet2.distance ? 'disabled' : ''}}"
+				*ngFor="let vehicle of vehicles_arr">
+				<label>
+					<input type="radio" name="vehicle2" [value]="vehicle" [(ngModel)]="vehicle2"
+						disabled="{{vehicle.max_distance < planet2.distance ? 'disabled' : 'false'}}"
+						(ngModelChange)="onVehicleSelect('vehicle2')">
+					{{vehicle.name}} ({{vehicle.total_no}})
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<!-- planet 3 input -->
+	<div class="col-sm-3">
+		<select class="form-control" [(ngModel)]="planet3" (change)="planetChange('planet3')">
+			<option value="">Select</option>
+			<option *ngFor="let planet of planets" [ngValue]="planet"> {{planet.name}} </option>
+		</select>
+		
+		<div *ngIf="planet3 != ''">
+			<div class="radio {{vehicle.max_distance < planet3.distance ? 'disabled' : ''}}"
+				*ngFor="let vehicle of vehicles_arr">
+				<label>
+					<input type="radio" name="vehicle3" [value]="vehicle" [(ngModel)]="vehicle3"
+						disabled="{{vehicle.max_distance < planet3.distance ? 'disabled' : 'false'}}"
+						(ngModelChange)="onVehicleSelect('vehicle3')">
+					{{vehicle.name}} ({{vehicle.total_no}})
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<!-- planet 4 input -->
+	<div class="col-sm-3">
+		<select class="form-control" [(ngModel)]="planet4" (change)="planetChange('planet4')">
+			<option value="">Select</option>
+			<option *ngFor="let planet of planets" [ngValue]="planet"> {{planet.name}} </option>
+		</select>
+		
+		<div *ngIf="planet4 != ''">
+			<div class="radio {{vehicle.max_distance < planet4.distance ? 'disabled' : ''}}"
+				*ngFor="let vehicle of vehicles_arr">
+				<label>
+					<input type="radio" name="vehicle4" [value]="vehicle" [(ngModel)]="vehicle4"
+						disabled="{{vehicle.max_distance < planet4.distance ? 'disabled' : 'false'}}"
+						(ngModelChange)="onVehicleSelect('vehicle4')">
+					{{vehicle.name}} ({{vehicle.total_no}})
+				</label>
+			</div>
+		</div>
+	</div>
+
+
+</div>
