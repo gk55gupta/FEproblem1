@@ -1,0 +1,13 @@
+*****____TODO_____******
+
+- add router for main and final result - done
+
+- learn and implement routing guard - 
+
+- calculate time taken - 
+
+- create UI to show vehicles and their count - 
+
+- UI needs to be more Interactive - 
+
+

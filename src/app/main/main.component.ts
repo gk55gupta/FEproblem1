@@ -8,8 +8,8 @@ import { AppService } from '../app.service';
 })
 export class MainComponent implements OnInit {
 
-  planets = '';
-  vehicles = [];
+  planets = '';    // list of planets recieved from api
+  vehicles = [];   // list of vehicles recieved from api
   token = { token: '' };
   data = {};
   result = '';
